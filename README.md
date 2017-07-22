@@ -5,12 +5,12 @@
 A simple JavaScript implimentation for fuzzy search with a BK-tree is provided here. This is motivated by a very interesting article titled "[Interesting data structures: the BK-tree](http://signal-to-noise.xyz/post/bk-tree/)".
 
 ## 最低限必要なもの / Files required in the minimum configuration
-以下の二つのファイルを読み込んで、探索用関数を呼び出すための追加のスクリプトをちょっと書くだけで、用途に応じた曖昧検索ページを作れます。
+探索対象の BK 木 (の JavaScript オブジェクト) を用意したうえで、以下の二つのファイルを読み込んで、探索用関数を呼び出すための追加のスクリプトをちょっと書くだけで、用途に応じた曖昧検索ページを作れます。
 
 * `search_BK_tree.js`: 曖昧検索のための関数を定義
 * `dist.js`: 距離関数を定義
 
-You can easily create a page for fuzzy search tailored for your purpose, only by importing the two files indicated below and writing a small piece of additional script code to call the search function.
+You can easily create a page for fuzzy search tailored for your purpose, only by preparing a BK-tree (in the form of a JavaScript object) to be searched, importing the two files indicated below, and writing a small piece of additional script code to call the search function.
 
 * `search_BK_tree.js`: a function for fuzzy search is defined.
 * `dist.js`: a distance function is defined.
