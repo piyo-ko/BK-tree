@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<base target="_top">
+<script src="../dist.js"></script>
+<script src="../sample_BK_tree.js"></script>
+<script src="../print_BK_tree.js"></script>
+<script src="../search_BK_tree.js"></script>
+
+<script>
+console.log("sample_T is as follows:");
+print_BK_tree(sample_T, 0);
+
+function print_result(r) {
+  //console.log("-----" + r.length + " element(s) returned ----");
+  var tmp;
+  for (var n = 0; n < r.length; n++) {
+    tmp = "[disance=" + n + "]: ";
+    for (var s = 0; s < r[n].length; s++) {
+      tmp += (r[n][s] + " / ");
+    }
+    console.log(tmp);
+  }
+}
+
+var res;
+
+console.log("\n*** search with query \"soft\" and allowance 0 ***");
+res=search_BK_tree("soft", 0, sample_T);
+print_result(res);
+
+console.log("\n*** search with query \"sof\" and allowance 0 ***");
+res=search_BK_tree("sof", 0, sample_T);
+print_result(res);
+
+console.log("\n*** search with query \"som\" and allowance 1 ***");
+res=search_BK_tree("som", 1, sample_T);
+print_result(res);
+
+console.log("\n*** search with query \"som\" and allowance 2 ***");
+res=search_BK_tree("som", 2, sample_T);
+print_result(res);
+
+console.log("\n*** Bye! ***");
+</script>
+<title>some tests with a sample BK-tree</title>
+</head>
+<body>
+
+<p>Some tests are performed with a sample BK-tree shown below.  See the browser's console.</p>
+
+<p>以下のような BK 木のサンプルを使っていくつかテストをします。コンソールを見てね。</p>
+
+
+<img src="sample-BK-tree.png" alt="a sample BK-tree" />
+
+<p>Note: This sample is the same as that illustrated in <cite><a href="http://signal-to-noise.xyz/post/bk-tree/">Interesting data structures: the BK-tree</a></cite> (but the image file is one that I created).</p>
+<p>なおこのサンプルは、「<a href="http://postd.cc/bk-tree/">興味深いデータ構造：BK木</a>」のサンプルと同じです (ただし画像は当方で改めて作成しました)。</p>
+
+</body>
+</html>
