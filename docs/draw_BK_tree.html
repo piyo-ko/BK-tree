@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<base target="_top">
+<title>Visualizing a BK-tree and downloading its image file</title>
+<script src="../sample_BK_tree.js"></script>
+<script src="../draw_BK_tree.js"></script>
+<script src="../get_timestamp.js"></script>
+<script>
+window.onload = function() {
+  const c = 
+    draw_BK_tree(sample_T, 'orange', 'royalblue', 20, 60, 'tree_display');
+
+  download_image_of_canvas(c, 'BK-tree_', 'tree_display', 'Download this image');
+  //automatic_download(c, 'BK-tree_');
+};
+</script>
+</head>
+<body>
+
+<p>The sample BK-tree of <a href="test_with_sample.html">the test page</a> is visualized here.  The resultant image (in PNG format) will be downloaded.  Note that <code>draw_BK_tree()</code> function may fail to work well when applied to a very huge BK-tree.</p>
+
+<p>サンプルの BK 木 (<a href="test_with_sample.html">テストページを参照</a>) の絵を描きます。その結果できた画像 (PNG ファイル) をダウンロードします。なお、巨大な木に対して <code>draw_BK_tree()</code> 関数を適用した場合は、うまく動作しないことがあります。</p>
+
+<div id="tree_display" style="border: solid 1px;"></div>
+
+</body>
+</html>

@@ -22,3 +22,14 @@ file | 説明 | description
 `sample_BK_tree.js` | 簡単な BK 木を JavaScript オブジェクトとして定義したもの | a definition of a simple BK-tree as an JavaScript object
 `docs/test_with_sample.html` | 簡単なテスト例 (実際の利用例へのリンクあり) | illustrative simple tests (incl. a link to an actual example)
 `print_BK_tree.js` | デバッグ用の印字関数 | a function to print a BK-tree for debugging
+`draw_BK_tree.js` | BK 木を描画する関数と、それを画像ファイルとしてダウンロードできるようにする関数 | a function to draw a BK-tree and functions to make the image file of it downloadable
+`get_timestamp.js` | yyyy-mm-dd_hhmmss 形式のタイムスタンプ (ファイル名の一部にする) を返す関数 | a function to return a timestamp (to be used as a part of a file name) in yyyy-mm-dd_hhmmss format
+`docs/draw_BK_tree.html` | サンプルの BK 木を描画して画像ファイルとしてダウンロードするページの例 | an illustrative page for drawing a sample BK-tree and for downloading the image file of it
+
+たとえば以下のようにして Imagemagick の `convert` コマンドを使うと、ダウンロード済み画像を回転できます。
+
+Using `convert` command of Imagemagick, you can rotate the downloaded image file.  One example of such rotation is indicated below.
+
+````
+$ convert -rotate 90 tree_2017-07-31_123456.png rotated_tree.png
+````
