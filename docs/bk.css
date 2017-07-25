@@ -1,0 +1,23 @@
+body {
+  color: hsl(80, 25%, 15%);
+  background: hsl(80, 60%, 85%);
+  margin: 1em;
+}
+h1 {
+  text-align: center;
+  color: hsl(25, 100%, 30%);
+  background: hsl(80, 55%, 60%);
+  font-size: x-large;
+}
+h2 {
+  text-align: center;
+  color: hsl(25, 100%, 30%);
+  font-size: large;
+}
+p {
+  text-indent: 1em;
+}
+nav {
+  margin-top: 1em;
+  text-align: right;
+}
