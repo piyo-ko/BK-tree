@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<base target="_top">
+<title>Creating a new BK-tree</title>
+<script src="../dist.js"></script>
+<script src="../create_BK_tree.js"></script>
+<script src="../draw_BK_tree.js"></script>
+<script src="../get_timestamp.js"></script>
+
+<script>
+function new_BK_tree() {
+  const BK = create_BK_tree(document.f.val_src);
+  document.getElementById('json_output').innerHTML = JSON.stringify(BK, '');
+
+  document.getElementById('tree_display').innerHTML = "";
+  const c = draw_BK_tree(BK, 'crimson', 'darkblue', 4, 20, 'tree_display');
+  download_image_of_canvas(c, 'BK-tree_', 'tree_display', 'Download this image');
+}
+</script>
+
+
+<link rel="stylesheet" href="bk.css" type="text/css">
+<style>
+code {
+  display: block; 
+  white-space: normal;
+  border: solid 1px royalblue;
+  background: silver;
+  padding: 4pt;
+  margin: 6pt;
+}
+#memo {
+  display: inline-block; 
+}
+#tree_display {
+  border: solid 1px royalblue;
+  padding: 4pt;
+  margin: 6pt;
+}
+</style>
+</head>
+
+
+<body>
+
+<h1>Creating a new BK-tree<br>BK 木の作成</h1>
+<form name="f">
+<table><tr>
+<td><textarea name="val_src" cols="20" rows="20"></textarea></td>
+<td><div id="memo">
+<ol>
+<li>Input values (character strings) in a way in which each one line includes one value. / 1 行に 1 個ずつ値 (文字列) を入力してください。</li>
+<li>Tap (or click) this button / このボタンをタップ (ないしクリック) してください: <input type="button" value="Create a new BK-tree" onclick="new_BK_tree()" /></li>
+<li>A BK-tree will be generated. / BK 木が作成されます。</li>
+<li>The BK-tree in JSON format will be indicated below. / BK 木が JSON 形式で表示されます。</li>
+<li>The BK-tree will also be visualized below. / BK 木は描画もされます。</li>
+</ol>
+</div></td>
+</tr></table>
+</form>
+
+<code id="json_output"></code>
+
+<div id="tree_display"></div>
+
+<nav>[
+<a href="index.html">a list of demo pages</a> |
+<a href="https://github.com/piyo-ko/BK-tree">GitHub repository</a> |
+<a href="https://www.twitter.com/pi__yo__ko" target="_blank">Twitter</a> (almost in Japanese) | 
+<a href="https://piyo-ko.github.io/">Home</a>
+]</nav>
+
+</body>
+</html>

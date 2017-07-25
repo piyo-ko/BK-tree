@@ -25,6 +25,8 @@ file | 説明 | description
 `draw_BK_tree.js` | BK 木を描画する関数と、それを画像ファイルとしてダウンロードできるようにする関数 | a function to draw a BK-tree and functions to make the image file of it downloadable
 `get_timestamp.js` | yyyy-mm-dd_hhmmss 形式のタイムスタンプ (ファイル名の一部にする) を返す関数 | a function to return a timestamp (to be used as a part of a file name) in yyyy-mm-dd_hhmmss format
 `docs/draw_BK_tree.html` | サンプルの BK 木を描画して画像ファイルとしてダウンロードするページの例 | an illustrative page for drawing a sample BK-tree and for downloading the image file of it
+`create_BK_tree.js` | BK 木を作成する関数 | functions to create a new BK-tree
+`docs/create_BK_tree.html` | 入力された文字列からBK 木を作成し、JSON 形式と画像で表示するページ | a page for creating a BK-tree from input strings and displaying the tree in JSON format and as an image
 
 たとえば以下のようにして Imagemagick の `convert` コマンドを使うと、ダウンロード済み画像を回転できます。
 
